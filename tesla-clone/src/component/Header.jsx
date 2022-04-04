@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{ useState} from 'react';
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon  from '@material-ui/icons/Close';
 
 function Header() {
-  return (
+    const [burgerState,setBurgerState] = useState(false);
+
+    return (
     <Container>
         <a href='#'>
             <img src='/images/logo.svg' alt=''/>
@@ -17,13 +19,13 @@ function Header() {
         <RightMenu>
             <a href='#'>Shop</a>
             <a href='#'>Tesla Account</a>
-        <MenuIconContainer>
+        <MenuIconContainer onClick={ () => setBurgerStatus(true)} >
             <MenuIcon/>
         </MenuIconContainer>
         </RightMenu>
-        <BurgerNav>
+        <BurgerNav status={burgerStatus}>
             <CloseContainer>
-              <Close/>
+              <Close onClick={ () => setBurgerStatus(false)} />
             </CloseContainer>
             <li><a href='#'>Model S</a></li>
             <li><a href='#'>Model Y</a></li>
@@ -34,7 +36,7 @@ function Header() {
             <li><a href='#'>Roadster</a></li>
             <li><a href='#'>Semi</a></li>
             <li><a href='#'>Charging</a></li>
-        </BurgerNav>
+        </BurgerNav >
     </Container>
   )
 }
@@ -62,6 +64,10 @@ div {
     font-weight: 600;
     padding: 0 10px;
     cursor: pointer;
+}
+
+@media(max-width: 760px) {
+    display: none;
 }
 `;
 
@@ -97,6 +103,8 @@ right: 0;
 bottom: 0;
 padding: 20px;
 list-style: none;
+transform: ${props => props.status ? 'translateX(0)' : 'translateX(100%)'};
+transition: transform 0.2s ease-in;
 li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
