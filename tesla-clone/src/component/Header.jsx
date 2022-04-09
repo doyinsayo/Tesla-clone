@@ -5,7 +5,6 @@ import CloseIcon  from '@material-ui/icons/Close';
 
 function Header() {
     const [burgerState,setBurgerState] = useState(false);
-
     return (
     <Container>
         <a href='#'>
