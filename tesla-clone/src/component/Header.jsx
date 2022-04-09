@@ -19,13 +19,13 @@ function Header() {
         <RightMenu>
             <a href='#'>Shop</a>
             <a href='#'>Tesla Account</a>
-        <MenuIconContainer onClick={ () => setBurgerStatus(true)} >
+        <MenuIconContainer onClick={ () => setBurgerState(true)} >
             <MenuIcon/>
         </MenuIconContainer>
         </RightMenu>
-        <BurgerNav status={burgerStatus}>
+        <BurgerNav status={burgerState}>
             <CloseContainer>
-              <Close onClick={ () => setBurgerStatus(false)} />
+              <Close onClick={ () => setBurgerState(false)} />
             </CloseContainer>
             <li><a href='#'>Model S</a></li>
             <li><a href='#'>Model Y</a></li>
