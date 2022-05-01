@@ -4,7 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon  from '@material-ui/icons/Close';
 
 function Header() {
-    const [burgerState,setBurgerState] = useState(false);
+    const [burgerStatus,setBurgerStatus] = useState(false);
     return (
     <Container>
         <a href='#'>
@@ -18,13 +18,13 @@ function Header() {
         <RightMenu>
             <a href='#'>Shop</a>
             <a href='#'>Tesla Account</a>
-        <MenuIconContainer onClick={ () => setBurgerState(true)} >
+        <MenuIconContainer onClick={ () => setBurgerStatus(true)} >
             <MenuIcon/>
         </MenuIconContainer>
         </RightMenu>
-        <BurgerNav status={burgerState}>
+        <BurgerNav status={burgerStatus}>
             <CloseContainer>
-              <Close onClick={ () => setBurgerState(false)} />
+              <Close onClick={ () => setBurgerStatus(false)} />
             </CloseContainer>
             <li><a href='#'>Model S</a></li>
             <li><a href='#'>Model Y</a></li>
