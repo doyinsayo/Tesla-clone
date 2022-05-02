@@ -11,7 +11,7 @@ function Section(props) {
       </ItemText>
       <ButtonGroup>
          <LeftButton>{props.leftBtnText}</LeftButton>
-         <RightButton>{}</RightButton>
+         <RightButton>{props.rightBtnText}</RightButton>
       </ButtonGroup>
       <DownArrow src='/images/down-arrow.svg'/>
     </Container>
@@ -41,15 +41,38 @@ flex-grow: 1;
 `
 
 const ButtonGroup = styled.div`
-displat: flex;
+display: flex;
 margin-bottom: 30px;
-align-self: flex-end;
+padding-top: 22px;
+align-items: center;
+justify-content: center;
+text-align:center;
+@media (max-width: 768px){
+    flex-direction: column;
+}
 `
+
+/*const LeftButton = styled.div`
+    background-color: rgba(23, 26, 32, 0.6);
+    height: 40px;
+    width: 256px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 8px;
+`*/
 
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);
 height: 40px;
 width: 256px;
+display: flex;
 border-radius: 100px;
 color: white;
 justify-content: center;
@@ -64,7 +87,6 @@ cursor: pointer;
 const RightButton = styled(LeftButton) `
 background-color: white;
 color: black;
-opacity:
 `
 const DownArrow = styled.img`
 height: 40px;
