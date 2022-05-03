@@ -52,22 +52,6 @@ text-align:center;
 }
 `
 
-/*const LeftButton = styled.div`
-    background-color: rgba(23, 26, 32, 0.6);
-    height: 40px;
-    width: 256px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    opacity: 0.85;
-    text-transform: uppercase;
-    font-size: 12px;
-    cursor: pointer;
-    margin: 8px;
-`*/
-
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);
 height: 40px;

@@ -60,6 +60,7 @@ function Home() {
       description=""
       backgroundImg="accessories.jpg"
       leftBtnText="Order Now"
+      rightBtnText='Learn more'
       />
     </div>
   )
